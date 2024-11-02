@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist-sans: 'Geist Sans', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
+  --font-primary: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,7 +24,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +44,12 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.mono {
+  font-family: var(--font-geist-mono);
+}
+
+.sans {
+  font-family: var(--font-geist-sans);
 }
