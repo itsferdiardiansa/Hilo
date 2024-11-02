@@ -1,3 +1,67 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "jsx-a11y",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "react/jsx-boolean-value": ["warn", "never"],
+    "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "never" }],
+    "react/jsx-key": "warn",
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "import/no-anonymous-default-export": "warn",
+    "react/no-array-index-key": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-expressions": ["warn", { "allowShortCircuit": true, "allowTernary": true }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-shadow": "warn",
+    "react/jsx-no-useless-fragment": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }

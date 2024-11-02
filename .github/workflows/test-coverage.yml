@@ -1,0 +1,53 @@
+name: Test coverage
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+env:
+  NODE_VERSION: 21
+  PNPM_VERSION: 9
+jobs:
+  test-coverage:
+    if: github.event_name == 'pull_request' && github.head_ref != 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Cache pnpm Store
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install pnpm
+        run: npm install -g pnpm@${{ env.PNPM_VERSION }}
+
+      - name: Install Dependencies
+        run: pnpm install:all
+
+      - name: Run test coverage
+        run: pnpm run test:coverage
+
+      - name: Upload coverage reports artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ vars.COVERAGE_NAME }}
+          path: ${{ vars.COVERAGE_PATH }}
+  
+  main-coverage-sync:
+    needs: test-coverage
+    uses: ./.github/workflows/wc-upload-coverage.yml
+    secrets: inherit
