@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Pokédex App
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-15.0.2-blue.svg)](https://nextjs.org/)
+[![Styled Components](https://img.shields.io/badge/styled--components-6.1.13-db7093.svg)](https://styled-components.com/)
+[![React](https://img.shields.io/badge/React-19.0.0-informational)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
+[![ESLint](https://img.shields.io/badge/ESLint-8.x-4B32C3.svg)](https://eslint.org/)
+[![Husky](https://img.shields.io/badge/Husky-8.0.0-lightgrey.svg)](https://typicode.github.io/husky/)
+[![Prettier](https://img.shields.io/badge/Prettier-2.6.2-ff69b4.svg)](https://prettier.io/)
+[![PNPM](https://img.shields.io/badge/Package%20Manager-pnpm%409.12.1-F69220)](https://pnpm.io/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Pokédex App is a Next.js-based project leveraging TypeScript, Styled Components, ESLint, Prettier, and Husky. This app provides comprehensive information about various Pokémon in a modern, responsive interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **React 19** and **Next.js 15** for fast web application development.
+- **Styled Components** for dynamic styling and CSS templating.
+- **TypeScript** for safer typing.
+- **ESLint** and **Prettier** for code quality assurance.
+- **Husky** for pre-commit linting.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Technology Stack
 
-## Learn More
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Styled Components**
+- **Axios** for HTTP requests
+- **Tanstack React Query** for data management
+- **Jest** and **Testing Library** for testing
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/itsferdiardiansa/pokedex-app.git
+   cd pokedex-app
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Ensure `pnpm` is installed:**
+   This project uses PNPM as the package manager. If you haven’t installed it yet, run:
+   ```bash
+   npm install -g pnpm
+   ```
 
-## Deploy on Vercel
+3. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔨 Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Development**: `pnpm dev`
+- **Production Build**: `pnpm build`
+- **Start Application**: `pnpm start`
+- **Linting**: `pnpm lint`
+- **Fix Linting Issues**: `pnpm lint:fix`
+- **Format Code**: `pnpm format`
+- **Check Formatting**: `pnpm format:check`
+- **Testing**: `pnpm test`
+- **Testing with Watch**: `pnpm test:watch`
+- **Type Check**: `pnpm type-check`
+- **Clean Previous Builds**: `pnpm clean`
+- **Validate Code Quality**: `pnpm validate`
