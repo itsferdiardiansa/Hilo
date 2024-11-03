@@ -1,6 +1,6 @@
 {
   "name": "hilo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "author": {
@@ -27,9 +27,13 @@
     "validate": "pnpm lint && pnpm type-check && pnpm format:check && pnpm test"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.59.18",
+    "axios": "^1.7.7",
     "next": "15.0.2",
     "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-icons": "^5.3.0",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -38,6 +42,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
+    "@tanstack/react-query-devtools": "^5.59.18",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.14",
