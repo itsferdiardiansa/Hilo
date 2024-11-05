@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components'
-import { mediaQuery } from '@/styles/mixins/media'
+import styled, { css } from "styled-components"
+import { mediaQuery } from "@/styles/mixins/media"
 
 const navLinkStyles = css`
   width: 100%;
@@ -56,11 +56,11 @@ export const NavTitle = styled.div`
   gap: 8px;
 `
 
-export const Subtitle = styled.div<{ disabled?: boolean; isActive?: boolean }>`
+export const Subtitle = styled.div<{ disabled?: boolean; $isActive?: boolean }>`
   transition: background-color 0.3s, color 0.3s;
 
   ${(props) =>
-    props.isActive &&
+    props.$isActive &&
     `
     a {
       ${activeLink}
@@ -106,7 +106,7 @@ export const SidebarFooter = styled.div`
   text-align: center;
   border-top: 1px solid #3a3a3a;
 
-  ${mediaQuery('desktop')`
+  ${mediaQuery("desktop")`
     position: absolute;
     left: 0;
     bottom: 10px;
