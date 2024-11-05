@@ -1,1 +1,1 @@
-export { default } from './EggGroup'
+export { default } from "./EggGroup"

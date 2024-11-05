@@ -1,5 +1,5 @@
-import DashboardLayout from '@/components/layout/DashboardLayout'
-import PokemonDetail from '@/features/pokemon/pages/pokemon-detail'
+import DashboardLayout from "@/components/layout/DashboardLayout"
+import PokemonDetail from "@/features/pokemon/pages/pokemon-detail"
 
 interface PokemonDetailPageProps {
   pokemon: {

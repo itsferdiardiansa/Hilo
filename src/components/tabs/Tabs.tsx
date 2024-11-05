@@ -1,5 +1,5 @@
-import React from 'react'
-import { TabButton, TabsContainer } from './Tabs.styles'
+import React from "react"
+import { TabButton, TabsContainer } from "./Tabs.styles"
 
 interface Tab {
   label: string

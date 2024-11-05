@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledInput = styled.input`
   height: 36px;
@@ -8,7 +8,7 @@ export const StyledInput = styled.input`
   border-radius: 8px;
   background-color: #3a3a3a;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   outline: none;
   transition: background-color 0.3s;
 

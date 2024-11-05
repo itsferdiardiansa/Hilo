@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import type { PokemonType } from '@/constants/typeColors'
-import { typeColors } from '@/constants/typeColors'
+import styled from "styled-components"
+import type { PokemonType } from "@/constants/typeColors"
+import { typeColors } from "@/constants/typeColors"
 
 interface StyledProps {
   type: PokemonType

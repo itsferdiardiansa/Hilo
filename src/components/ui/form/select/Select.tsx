@@ -1,5 +1,5 @@
-import { FiChevronDown, FiFilter } from 'react-icons/fi'
-import { StyledSelectContainer, StyledSelect } from './Select.styles'
+import { FiChevronDown, FiFilter } from "react-icons/fi"
+import { StyledSelectContainer, StyledSelect } from "./Select.styles"
 
 interface SelectProps<T> {
   options: T[]
@@ -18,7 +18,7 @@ const Select = <T,>({
     <StyledSelectContainer>
       <FiFilter className="filter-icon" />
       <StyledSelect
-        value={value ? getOptionLabel(value) : ''}
+        value={value ? getOptionLabel(value) : ""}
         onChange={(e) => {
           const selectedOption = options.find(
             (option) => getOptionLabel(option) === e.target.value,

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Card = styled.div<{ $bgColor: string }>`
   position: relative;
@@ -7,7 +7,7 @@ export const Card = styled.div<{ $bgColor: string }>`
   color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  background-color: ${(props) => props.$bgColor || '#333333'};
+  background-color: ${(props) => props.$bgColor || "#333333"};
   overflow: hidden;
   min-width: 200px;
   flex: 1 1 250px;
@@ -33,7 +33,7 @@ export const PokemonImageContainer = styled.div<{ $shapeColor: string }>`
   width: 30%;
   height: 60%;
   border-bottom-left-radius: 50%;
-  background-color: ${(props) => props.$shapeColor || '#444444'};
+  background-color: ${(props) => props.$shapeColor || "#444444"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ export const TypeBadge = styled.span`
   font-size: 12px;
   font-weight: 500;
   color: #ffffff;
-  background-color: ${(props) => props.color || '#666666'};
+  background-color: ${(props) => props.color || "#666666"};
   margin-top: 4px;
   width: fit-content;
 `

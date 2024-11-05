@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaQuery } from '@/styles/mixins/media'
+import styled from "styled-components"
+import { mediaQuery } from "@/styles/mixins/media"
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const MainContent = styled.div`
   color: #d9e2ec;
   overflow-y: auto;
 
-  ${mediaQuery('desktop')(`
+  ${mediaQuery("desktop")(`
     padding: 90px 20px 80px 20px;
     margin-left: 0;
   `)}

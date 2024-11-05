@@ -1,11 +1,11 @@
-import { render, screen } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Badge from '..'
-import { typeColors } from '@/constants/typeColors'
+import { render, screen } from "@testing-library/react"
+import "@testing-library/jest-dom"
+import Badge from ".."
+import { typeColors } from "@/constants/typeColors"
 
-describe('Badge Component', () => {
-  it('renders with the correct type and color', () => {
-    const type = 'Fire'
+describe("Badge Component", () => {
+  it("renders with the correct type and color", () => {
+    const type = "Fire"
     const expectedColor = typeColors[type]
 
     render(<Badge type={type} />)

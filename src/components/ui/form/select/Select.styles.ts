@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledSelectContainer = styled.div`
   position: relative;
@@ -31,7 +31,7 @@ export const StyledSelect = styled.select`
   border-radius: 8px;
   background-color: #2c2c2c;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
   border: none;
   appearance: none;

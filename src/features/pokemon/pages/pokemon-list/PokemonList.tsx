@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { useState, useEffect } from "react"
+import { useRouter } from "next/router"
+import Link from "next/link"
 
-import type { Pokemon } from '@/features/pokemon/api/pokemonApi'
-import { usePokemonList } from '@/features/pokemon/hooks/usePokemonList'
+import type { Pokemon } from "@/features/pokemon/api/pokemonApi"
+import { usePokemonList } from "@/features/pokemon/hooks/usePokemonList"
 
-import InfiniteScrollLoader from '@/components/infinity-scroll'
-import SearchForm from '@/features/pokemon/components/search-form'
-import PokemonCard from '@/features/pokemon/components/pokemon-card'
-import NotFound from '@/features/pokemon/components/pokemon-not-found'
-import { CenteredContainer } from '@/features/pokemon/components/pokemon-not-found/PokemonNotFound.styles'
+import InfiniteScrollLoader from "@/components/infinity-scroll"
+import SearchForm from "@/features/pokemon/components/search-form"
+import PokemonCard from "@/features/pokemon/components/pokemon-card"
+import NotFound from "@/features/pokemon/components/pokemon-not-found"
+import { CenteredContainer } from "@/features/pokemon/components/pokemon-not-found/PokemonNotFound.styles"
 
-import { StyledPokemonList } from './PokemonList.styles'
-import Loader from '@/components/infinity-scroll/Loader'
+import { StyledPokemonList } from "./PokemonList.styles"
+import Loader from "@/components/infinity-scroll/Loader"
 
 const PokemonList = () => {
   const router = useRouter()
@@ -35,7 +35,7 @@ const PokemonList = () => {
 
     router.push(
       {
-        pathname: '/',
+        pathname: "/",
         query: {
           ...(newFilters.name ? { name: newFilters.name } : {}),
           ...(newFilters.type ? { type: newFilters.type } : {}),

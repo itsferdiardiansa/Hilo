@@ -1,4 +1,4 @@
-import { StyledInput } from './Input.styles'
+import { StyledInput } from "./Input.styles"
 
 interface InputProps {
   type?: string

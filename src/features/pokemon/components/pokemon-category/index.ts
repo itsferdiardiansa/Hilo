@@ -1,1 +1,1 @@
-export { default } from './PokemonCategory'
+export { default } from "./PokemonCategory"

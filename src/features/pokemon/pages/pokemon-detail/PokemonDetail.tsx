@@ -1,20 +1,20 @@
-import Banner from '@/features/pokemon/components/banner'
-import Moves from '@/features/pokemon/components/moves/Moves'
-import EvolutionCard from '@/features/pokemon/components/evolution-card'
-import PokemonStats from '@/features/pokemon/components/pokemon-stats'
-import PokemonTypes from '@/features/pokemon/components/pokemon-types'
-import Abilities from '@/features/pokemon/components/abilities'
-import PokedexEntry from '@/features/pokemon/components/pokemon-entry'
-import EggGroup from '@/features/pokemon/components/egg-group/EggGroup'
-import PokemonCategory from '@/features/pokemon/components/pokemon-category'
-import type { Pokemon } from '@/features/pokemon/api/pokemonApi'
+import Banner from "@/features/pokemon/components/banner"
+import Moves from "@/features/pokemon/components/moves/Moves"
+import EvolutionCard from "@/features/pokemon/components/evolution-card"
+import PokemonStats from "@/features/pokemon/components/pokemon-stats"
+import PokemonTypes from "@/features/pokemon/components/pokemon-types"
+import Abilities from "@/features/pokemon/components/abilities"
+import PokedexEntry from "@/features/pokemon/components/pokemon-entry"
+import EggGroup from "@/features/pokemon/components/egg-group/EggGroup"
+import PokemonCategory from "@/features/pokemon/components/pokemon-category"
+import type { Pokemon } from "@/features/pokemon/api/pokemonApi"
 
 import {
   PageContainer,
   ContentWrapper,
   LeftColumn,
   RightColumn,
-} from './PokemonDetail.styles'
+} from "./PokemonDetail.styles"
 
 import {
   abilitiesData,
@@ -24,7 +24,7 @@ import {
   statsData,
   typesData,
   eggGroupData,
-} from './mockData'
+} from "./mockData"
 
 interface PokemonDetailProps {
   pokemon: Pokemon

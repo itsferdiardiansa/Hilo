@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaQuery } from '@/styles/mixins/media'
+import styled from "styled-components"
+import { mediaQuery } from "@/styles/mixins/media"
 
 export const StyledPokemonCard = styled.div<{ $bgColor?: string }>`
   position: relative;
@@ -7,7 +7,7 @@ export const StyledPokemonCard = styled.div<{ $bgColor?: string }>`
   color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  background-color: ${(props) => props.$bgColor || '#333333'};
+  background-color: ${(props) => props.$bgColor || "#333333"};
   overflow: hidden;
   display: flex;
 
@@ -27,7 +27,7 @@ export const PokemonCardInfo = styled.div`
 export const PokemonImageContainer = styled.div<{ $shapeColor?: string }>`
   width: 130px;
   height: 130px;
-  background-color: ${(props) => props.$shapeColor || '#444444'};
+  background-color: ${(props) => props.$shapeColor || "#444444"};
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
   overflow: hidden;
@@ -36,7 +36,7 @@ export const PokemonImageContainer = styled.div<{ $shapeColor?: string }>`
   justify-content: center;
   z-index: 0;
 
-  ${mediaQuery('tablet')`
+  ${mediaQuery("tablet")`
     width: 100px;
     height: 100px;
   `}
@@ -47,7 +47,7 @@ export const PokemonImage = styled.img`
   height: 110px;
   object-fit: cover;
 
-  ${mediaQuery('tablet')`
+  ${mediaQuery("tablet")`
     width: 90px;
     height: 90px;
   `}

@@ -1,5 +1,5 @@
-import type { PropsWithChildren } from 'react'
-import { useState } from 'react'
+import type { PropsWithChildren } from "react"
+import { useState } from "react"
 import {
   FiHome,
   FiBarChart,
@@ -12,87 +12,87 @@ import {
   FiStar,
   FiLayers,
   FiBook,
-} from 'react-icons/fi'
-import { Container, MainContent } from './DashboardLayout.styles'
+} from "react-icons/fi"
+import { Container, MainContent } from "./DashboardLayout.styles"
 
-import Header from './header'
-import Sidebar from './sidebar'
+import Header from "./header"
+import Sidebar from "./sidebar"
 
 const navItems = [
   {
-    title: 'Dashboard',
+    title: "Dashboard",
     icon: <FiHome />,
     links: [
-      { label: 'Pokémon', href: '/', icon: <FiBarChart />, disabled: false },
+      { label: "Pokémon", href: "/", icon: <FiBarChart />, disabled: false },
       {
-        label: 'Statistik Pokémon',
-        href: '/stats',
+        label: "Statistik Pokémon",
+        href: "/stats",
         icon: <FiPieChart />,
         disabled: true,
       },
       {
-        label: 'Aktivitas Terakhir',
-        href: '/activity',
+        label: "Aktivitas Terakhir",
+        href: "/activity",
         icon: <FiList />,
         disabled: true,
       },
     ],
   },
   {
-    title: 'Pencarian',
+    title: "Pencarian",
     icon: <FiSearch />,
     links: [
       {
-        label: 'Pencarian Berdasar Tipe',
-        href: '/search-type',
+        label: "Pencarian Berdasar Tipe",
+        href: "/search-type",
         icon: <FiLayers />,
         disabled: true,
       },
       {
-        label: 'Pencarian Lanjutan',
-        href: '/search-advanced',
+        label: "Pencarian Lanjutan",
+        href: "/search-advanced",
         icon: <FiTarget />,
         disabled: true,
       },
     ],
   },
   {
-    title: 'Favorit',
+    title: "Favorit",
     icon: <FiStar />,
     links: [
       {
-        label: 'Koleksi Saya',
-        href: '/favorites',
+        label: "Koleksi Saya",
+        href: "/favorites",
         icon: <FiHeart />,
         disabled: true,
       },
       {
-        label: 'Tim Pertarungan',
-        href: '/battle-team',
+        label: "Tim Pertarungan",
+        href: "/battle-team",
         icon: <FiFlag />,
         disabled: true,
       },
     ],
   },
   {
-    title: 'Panduan',
+    title: "Panduan",
     icon: <FiBook />,
     links: [
       {
-        label: 'Tips Trainer',
-        href: '/trainer-tips',
+        label: "Tips Trainer",
+        href: "/trainer-tips",
         icon: <FiBook />,
         disabled: true,
       },
       {
-        label: 'Panduan Evolusi',
-        href: '/evolution-guide',
+        label: "Panduan Evolusi",
+        href: "/evolution-guide",
         icon: <FiBarChart />,
         disabled: true,
       },
       {
-        label: 'Tantangan Mini Games',
-        href: '/mini-games',
+        label: "Tantangan Mini Games",
+        href: "/mini-games",
         icon: <FiFlag />,
         disabled: true,
       },
@@ -101,7 +101,7 @@ const navItems = [
 ]
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true)
+  const [isSidebarOpen, setSidebarOpen] = useState(false)
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen)

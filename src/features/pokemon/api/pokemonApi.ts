@@ -1,5 +1,5 @@
-import axiosInstance from '@/libs/axiosInstance'
-import { getPokemonImageUrl } from '@/utils/getPokemonImageUrl'
+import axiosInstance from "@/libs/axiosInstance"
+import { getPokemonImageUrl } from "@/utils/getPokemonImageUrl"
 
 export interface Pokemon {
   id: number

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
   FaFire,
   FaWater,
@@ -8,7 +8,7 @@ import {
   FaBug,
   FaDragon,
   FaGhost,
-} from 'react-icons/fa'
+} from "react-icons/fa"
 import {
   Badge,
   BadgeIcon,
@@ -18,7 +18,7 @@ import {
   Title,
   TypeHeader,
   TypesContainer,
-} from './PokemonTypes.styles'
+} from "./PokemonTypes.styles"
 
 const typeIcons: { [key: string]: JSX.Element } = {
   fire: <FaFire />,

@@ -5,50 +5,50 @@ import {
   PokemonImage,
   PokemonImageContainer,
   PokemonName,
-} from './PokemonCategory.styles'
+} from "./PokemonCategory.styles"
 
 const pokemonCards = [
   {
-    name: 'Bulbasaur',
-    type: 'Grass',
-    bgColor: '#78C850',
+    name: "Bulbasaur",
+    type: "Grass",
+    bgColor: "#78C850",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
-    name: 'Charmander',
-    type: 'Fire',
-    bgColor: '#F08030',
+    name: "Charmander",
+    type: "Fire",
+    bgColor: "#F08030",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
   },
   {
-    name: 'Squirtle',
-    type: 'Water',
-    bgColor: '#6890F0',
+    name: "Squirtle",
+    type: "Water",
+    bgColor: "#6890F0",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
   },
   {
-    name: 'Pikachu',
-    type: 'Electric',
-    bgColor: '#F8D030',
+    name: "Pikachu",
+    type: "Electric",
+    bgColor: "#F8D030",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
   },
   {
-    name: 'Jigglypuff',
-    type: 'Fairy',
-    bgColor: '#EE99AC',
+    name: "Jigglypuff",
+    type: "Fairy",
+    bgColor: "#EE99AC",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png",
   },
   {
-    name: 'Meowth',
-    type: 'Normal',
-    bgColor: '#A8A878',
+    name: "Meowth",
+    type: "Normal",
+    bgColor: "#A8A878",
     imgUrl:
-      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png',
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png",
   },
 ]
 

@@ -1,14 +1,14 @@
-import { getPokemonBgColor, getPokemonColor } from '@/utils/getPokemonColors'
-import Badge from '@/components/ui/badge'
-import type { Pokemon } from '@/features/pokemon/api/pokemonApi'
-import type { PokemonType } from '@/constants/typeColors'
+import { getPokemonBgColor, getPokemonColor } from "@/utils/getPokemonColors"
+import Badge from "@/components/ui/badge"
+import type { Pokemon } from "@/features/pokemon/api/pokemonApi"
+import type { PokemonType } from "@/constants/typeColors"
 import {
   StyledPokemonCard,
   PokemonCardInfo,
   PokemonName,
   PokemonImageContainer,
   PokemonImage,
-} from './PokemonCard.styles'
+} from "./PokemonCard.styles"
 
 const PokemonCard = ({
   types,

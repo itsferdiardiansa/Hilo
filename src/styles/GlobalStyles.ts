@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import { cssVariables } from './settings/theme'
+import { createGlobalStyle } from "styled-components"
+import { cssVariables } from "./settings/theme"
 
 const GlobalStyles = createGlobalStyle`
   :root {

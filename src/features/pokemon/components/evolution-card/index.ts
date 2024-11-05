@@ -1,1 +1,1 @@
-export { default } from './EvolutionCard'
+export { default } from "./EvolutionCard"

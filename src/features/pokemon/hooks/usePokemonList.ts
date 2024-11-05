@@ -1,5 +1,5 @@
-import { useInfiniteQuery } from '@tanstack/react-query'
-import { fetchPokemonList } from '../api/pokemonApi'
+import { useInfiniteQuery } from "@tanstack/react-query"
+import { fetchPokemonList } from "../api/pokemonApi"
 
 const POKEMON_LIMIT = 20
 
@@ -10,7 +10,7 @@ interface Filters {
 
 export const usePokemonList = (filters: Filters) => {
   return useInfiniteQuery({
-    queryKey: ['pokemonList', filters],
+    queryKey: ["pokemonList", filters],
     queryFn: ({ pageParam = 1 }) =>
       fetchPokemonList(pageParam, POKEMON_LIMIT, filters),
     getNextPageParam: (lastPage) => {

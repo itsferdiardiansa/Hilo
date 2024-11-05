@@ -1,5 +1,5 @@
-import { StyledBadge } from './Badge.styles'
-import type { PokemonType } from '@/constants/typeColors'
+import { StyledBadge } from "./Badge.styles"
+import type { PokemonType } from "@/constants/typeColors"
 
 interface BadgeProps {
   type: PokemonType

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StatsContainer = styled.div`
   display: flex;
@@ -54,13 +54,13 @@ export const BarContainer = styled.div`
 export const BarFill = styled.div<{
   value: number
   color: string
-  position: 'min' | 'max'
+  position: "min" | "max"
 }>`
   position: absolute;
   height: 100%;
   width: ${({ value }) => value}%;
   background-color: ${({ color }) => color};
   border-radius: ${({ position }) =>
-    position === 'min' ? '5px 0 0 5px' : '0 5px 5px 0'};
+    position === "min" ? "5px 0 0 5px" : "0 5px 5px 0"};
   transition: width 0.5s ease;
 `

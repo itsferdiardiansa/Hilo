@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaQuery } from '@/styles/mixins/media'
+import styled from "styled-components"
+import { mediaQuery } from "@/styles/mixins/media"
 
 export const Container = styled.div`
   display: flex;
@@ -27,7 +27,7 @@ export const IconGroup = styled.div`
   align-items: center;
   gap: 20px;
 
-  ${mediaQuery('mobile')(`
+  ${mediaQuery("mobile")(`
     gap: 10px;
   `)}
 `
@@ -47,7 +47,7 @@ export const MobileMenuIcon = styled.div`
   display: none;
   cursor: pointer;
 
-  ${mediaQuery('desktop')(`
+  ${mediaQuery("desktop")(`
     display: block;
   `)}
 `

@@ -1,6 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom'
-import Select from '../Select'
+import { render, screen, fireEvent } from "@testing-library/react"
+import "@testing-library/jest-dom"
+import Select from "../Select"
 
 interface Pokemon {
   id: number
@@ -8,13 +8,13 @@ interface Pokemon {
 }
 
 const pokemonOptions: Pokemon[] = [
-  { id: 1, name: 'Bulbasaur' },
-  { id: 2, name: 'Charmander' },
-  { id: 3, name: 'Squirtle' },
+  { id: 1, name: "Bulbasaur" },
+  { id: 2, name: "Charmander" },
+  { id: 3, name: "Squirtle" },
 ]
 
-describe('components/ui/form/select', () => {
-  it('renders Select component with options', () => {
+describe("components/ui/form/select", () => {
+  it("renders Select component with options", () => {
     render(
       <Select
         options={pokemonOptions}
@@ -32,7 +32,7 @@ describe('components/ui/form/select', () => {
     })
   })
 
-  it('calls onChange handler with selected option', () => {
+  it("calls onChange handler with selected option", () => {
     const handleChange = jest.fn()
     render(
       <Select

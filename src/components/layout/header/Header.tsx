@@ -1,11 +1,11 @@
-import { FiBell, FiUser, FiMenu } from 'react-icons/fi'
+import { FiBell, FiUser, FiMenu } from "react-icons/fi"
 import {
   Container,
   Logo,
   IconGroup,
   IconItem,
   MobileMenuIcon,
-} from './Header.styles'
+} from "./Header.styles"
 
 type HeaderProps = {
   onMenuClick: () => void

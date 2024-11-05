@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { CenteredContainer } from './PokemonNotFound.styles'
+import styled from "styled-components"
+import { CenteredContainer } from "./PokemonNotFound.styles"
 
 const Figure = styled.figure`
   display: flex;
