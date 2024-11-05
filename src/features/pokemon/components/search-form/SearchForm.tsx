@@ -1,4 +1,3 @@
-// src/features/pokemon/components/SearchForm.tsx
 import { useMemo, useState, useEffect } from 'react'
 import {
   SearchFormContainer,

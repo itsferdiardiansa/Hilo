@@ -1,4 +1,3 @@
-// src/components/InfiniteScrollLoader.tsx
 import { useRef, useCallback } from 'react'
 import Loader from './Loader'
 

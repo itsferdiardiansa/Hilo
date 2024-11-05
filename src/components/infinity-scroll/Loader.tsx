@@ -1,4 +1,3 @@
-// src/components/Loader.tsx
 import styled, { keyframes } from 'styled-components'
 
 const bounce = keyframes`

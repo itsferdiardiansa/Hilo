@@ -1,6 +1,6 @@
-import DashboardLayout from '@/components/layout/DashboardLayout'
 import Head from 'next/head'
 
+import DashboardLayout from '@/components/layout/DashboardLayout'
 import PokemonList from '@/features/pokemon/pages/pokemon-list/PokemonList'
 
 export default function Home() {

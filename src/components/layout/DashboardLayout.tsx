@@ -1,38 +1,125 @@
-import Link from 'next/link'
-import { FiHome, FiSettings } from 'react-icons/fi'
+import type { PropsWithChildren } from 'react'
+import { useState } from 'react'
 import {
-  Container,
-  MainMenu,
-  MainContent,
-  NavItem,
-  NavMenu,
-  Settings,
-  BrandLogo,
-} from './DashboardLayout.styles'
-import { PropsWithChildren } from 'react'
-import { useRouter } from 'next/router'
+  FiHome,
+  FiBarChart,
+  FiTarget,
+  FiHeart,
+  FiPieChart,
+  FiList,
+  FiFlag,
+  FiSearch,
+  FiStar,
+  FiLayers,
+  FiBook,
+} from 'react-icons/fi'
+import { Container, MainContent } from './DashboardLayout.styles'
+
+import Header from './header'
+import Sidebar from './sidebar'
+
+const navItems = [
+  {
+    title: 'Dashboard',
+    icon: <FiHome />,
+    links: [
+      { label: 'Pokémon', href: '/', icon: <FiBarChart />, disabled: false },
+      {
+        label: 'Statistik Pokémon',
+        href: '/stats',
+        icon: <FiPieChart />,
+        disabled: true,
+      },
+      {
+        label: 'Aktivitas Terakhir',
+        href: '/activity',
+        icon: <FiList />,
+        disabled: true,
+      },
+    ],
+  },
+  {
+    title: 'Pencarian',
+    icon: <FiSearch />,
+    links: [
+      {
+        label: 'Pencarian Berdasar Tipe',
+        href: '/search-type',
+        icon: <FiLayers />,
+        disabled: true,
+      },
+      {
+        label: 'Pencarian Lanjutan',
+        href: '/search-advanced',
+        icon: <FiTarget />,
+        disabled: true,
+      },
+    ],
+  },
+  {
+    title: 'Favorit',
+    icon: <FiStar />,
+    links: [
+      {
+        label: 'Koleksi Saya',
+        href: '/favorites',
+        icon: <FiHeart />,
+        disabled: true,
+      },
+      {
+        label: 'Tim Pertarungan',
+        href: '/battle-team',
+        icon: <FiFlag />,
+        disabled: true,
+      },
+    ],
+  },
+  {
+    title: 'Panduan',
+    icon: <FiBook />,
+    links: [
+      {
+        label: 'Tips Trainer',
+        href: '/trainer-tips',
+        icon: <FiBook />,
+        disabled: true,
+      },
+      {
+        label: 'Panduan Evolusi',
+        href: '/evolution-guide',
+        icon: <FiBarChart />,
+        disabled: true,
+      },
+      {
+        label: 'Tantangan Mini Games',
+        href: '/mini-games',
+        icon: <FiFlag />,
+        disabled: true,
+      },
+    ],
+  },
+]
 
 const DashboardLayout = ({ children }: PropsWithChildren) => {
-  return (
-    <Container>
-      <MainMenu>
-        <BrandLogo>Pokedex</BrandLogo>
-        <NavMenu>
-          <NavItem>
-            <Link href="/" passHref>
-              <FiHome size={18} />
-              <span>Pokemon</span>
-            </Link>
-          </NavItem>
+  const [isSidebarOpen, setSidebarOpen] = useState(true)
 
-          <NavItem>
-            <FiSettings size={18} />
-            <span>Settings</span>
-          </NavItem>
-        </NavMenu>
-      </MainMenu>
-      <MainContent>{children}</MainContent>
-    </Container>
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen)
+  }
+
+  return (
+    <>
+      <Header onMenuClick={toggleSidebar} />
+
+      <Container>
+        <Sidebar
+          items={navItems}
+          isOpen={isSidebarOpen}
+          onClose={toggleSidebar}
+        />
+        <MainContent>{children}</MainContent>
+      </Container>
+    </>
   )
 }
 

@@ -45,7 +45,7 @@ export const MoveCell = styled.div`
 `
 
 // Data Types
-interface Move {
+export interface Move {
   level: string
   name: string
   type: string

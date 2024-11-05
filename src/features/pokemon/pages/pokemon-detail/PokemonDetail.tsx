@@ -7,7 +7,7 @@ import Abilities from '@/features/pokemon/components/abilities'
 import PokedexEntry from '@/features/pokemon/components/pokemon-entry'
 import EggGroup from '@/features/pokemon/components/egg-group/EggGroup'
 import PokemonCategory from '@/features/pokemon/components/pokemon-category'
-import { Pokemon } from '@/features/pokemon/api/pokemonApi'
+import type { Pokemon } from '@/features/pokemon/api/pokemonApi'
 
 import {
   PageContainer,
@@ -30,7 +30,8 @@ interface PokemonDetailProps {
   pokemon: Pokemon
 }
 
-const DetailPage = ({ pokemon }: { pokemon: Pokemon }) => {
+/* eslint-disable no-empty-pattern */
+const DetailPage = ({}: PokemonDetailProps) => {
   return (
     <PageContainer>
       <PokemonCategory />

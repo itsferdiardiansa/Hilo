@@ -1,4 +1,3 @@
-// src/styles/mixins/media.ts
 import { css } from 'styled-components'
 import { breakpoints } from '../settings/breakpoints'
 

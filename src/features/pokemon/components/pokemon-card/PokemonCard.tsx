@@ -1,7 +1,7 @@
 import { getPokemonBgColor, getPokemonColor } from '@/utils/getPokemonColors'
 import Badge from '@/components/ui/badge'
 import type { Pokemon } from '@/features/pokemon/api/pokemonApi'
-import { PokemonType } from '@/constants/typeColors'
+import type { PokemonType } from '@/constants/typeColors'
 import {
   StyledPokemonCard,
   PokemonCardInfo,
@@ -21,7 +21,7 @@ const PokemonCard = ({
         <PokemonName>{name}</PokemonName>
 
         {types.map((type, key) => (
-          <Badge type={type as PokemonType} />
+          <Badge key={key} type={type as PokemonType} />
         ))}
       </PokemonCardInfo>
       <PokemonImageContainer $shapeColor={getPokemonColor(types[0])}>

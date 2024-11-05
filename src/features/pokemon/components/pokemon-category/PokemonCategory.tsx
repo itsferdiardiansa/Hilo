@@ -5,7 +5,6 @@ import {
   PokemonImage,
   PokemonImageContainer,
   PokemonName,
-  TypeBadge,
 } from './PokemonCategory.styles'
 
 const pokemonCards = [
