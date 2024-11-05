@@ -5,7 +5,7 @@ import { typeColors } from "@/constants/typeColors"
 
 describe("Badge Component", () => {
   it("renders with the correct type and color", () => {
-    const type = "Fire"
+    const type = "fire"
     const expectedColor = typeColors[type]
 
     render(<Badge type={type} />)
