@@ -43,6 +43,10 @@ export const NavMenu = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  ${mediaQuery("desktop")`
+    padding-bottom: 45px;
+  `}
 `
 
 export const NavTitle = styled.div`
@@ -54,6 +58,11 @@ export const NavTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
+
+  ${mediaQuery("desktop")`
+    margin: 10px;
+    padding: 0;
+  `}
 `
 
 export const Subtitle = styled.div<{ disabled?: boolean; $isActive?: boolean }>`
@@ -95,6 +104,10 @@ export const Divider = styled.div`
   height: 1px;
   background-color: #3a3a3a;
   margin: 15px 0;
+
+  ${mediaQuery("desktop")`
+    margin: 4px 0;
+  `}
 `
 
 export const SidebarFooter = styled.div`
@@ -104,13 +117,14 @@ export const SidebarFooter = styled.div`
   color: #a0a0a0;
   width: 100%;
   text-align: center;
-  border-top: 1px solid #3a3a3a;
+  border-top: 1px solid #333333;
+  background-color: rgb(30, 30, 30);
 
   ${mediaQuery("desktop")`
     position: absolute;
+    bottom: 0;
     left: 0;
-    bottom: 10px;
-    padding: 20px;
+    padding: 16px;
   `}
 `
 
