@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledButton = styled.button`
   height: 36px;
@@ -8,7 +8,7 @@ export const StyledButton = styled.button`
   border-radius: 8px;
   background-color: #7289da;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: background-color 0.3s;
 

@@ -1,6 +1,6 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   async rewrites() {
     return [
       {
@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  reactStrictMode: false,
+  compiler: {
+    styledComponents: true
+  }
 };
 
 export default nextConfig;

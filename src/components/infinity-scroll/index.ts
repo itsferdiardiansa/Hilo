@@ -1,1 +1,1 @@
-export { default } from './InfinityScrollLoader'
+export { default } from "./InfinityScrollLoader"

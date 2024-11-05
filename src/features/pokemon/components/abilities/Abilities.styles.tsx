@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const AbilitiesContainer = styled.div`
   background-color: #2d2d2d;
@@ -12,7 +12,7 @@ export const AbilitiesContainer = styled.div`
 export const Title = styled.h3`
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff; /* Warna putih untuk judul */
+  color: #ffffff;
   margin-bottom: 16px;
   border-bottom: 1px solid #444;
   padding-bottom: 8px;
@@ -41,7 +41,7 @@ export const AbilityHeader = styled.div`
 export const AbilityName = styled.span`
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff; /* Warna putih untuk nama ability */
+  color: #ffffff;
 `
 
 export const IconContainer = styled.div`
@@ -51,12 +51,12 @@ export const IconContainer = styled.div`
   width: 22px;
   height: 22px;
   font-size: 16px;
-  color: #ffffff; /* Warna putih untuk ikon */
+  color: #ffffff;
 `
 
 export const AbilityDescription = styled.p`
   font-size: 14px;
-  color: #ffffff; /* Warna putih untuk deskripsi */
+  color: #ffffff;
   margin-top: 4px;
   line-height: 1.5;
 `
@@ -67,5 +67,5 @@ export const HiddenAbilityBadge = styled.div`
   gap: 6px;
   font-size: 12px;
   font-weight: bold;
-  color: #ffffff; /* Warna putih untuk teks badge */
+  color: #ffffff;
 `

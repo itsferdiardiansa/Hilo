@@ -1,5 +1,5 @@
-import axiosInstance from '@/libs/axiosInstance'
-import { getPokemonImageUrl } from '@/utils/getPokemonImageUrl'
+import axiosInstance from "@/libs/axiosInstance"
+import { getPokemonImageUrl } from "@/utils/getPokemonImageUrl"
 
 export interface Pokemon {
   id: number
@@ -58,6 +58,7 @@ export const fetchPokemonList = async (
         data: [pokemonData],
         page: 1,
       }
+      /* eslint-disable @typescript-eslint/no-unused-vars */
     } catch (error) {
       return {
         data: [],

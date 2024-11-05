@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { FaArrowRight, FaArrowDown } from 'react-icons/fa'
+import styled from "styled-components"
+import { FaArrowRight, FaArrowDown } from "react-icons/fa"
 
 export const CardContainer = styled.div`
   display: flex;
@@ -121,7 +121,7 @@ export const GenderIcon = styled.div`
 `
 
 export const TypeBadge = styled.span`
-  background-color: ${({ color }) => color || '#666'};
+  background-color: ${({ color }) => color || "#666"};
   color: #ffffff;
   font-size: 10px;
   padding: 4px 8px;

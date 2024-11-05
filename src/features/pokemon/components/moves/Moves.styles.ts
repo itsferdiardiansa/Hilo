@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Card = styled.div`
   background-color: #252525;
@@ -45,7 +45,7 @@ export const MoveCell = styled.div`
 `
 
 // Data Types
-interface Move {
+export interface Move {
   level: string
   name: string
   type: string

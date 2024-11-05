@@ -1,6 +1,5 @@
-// src/components/InfiniteScrollLoader.tsx
-import { useRef, useCallback } from 'react'
-import Loader from './Loader'
+import { useRef, useCallback } from "react"
+import Loader from "./Loader"
 
 interface InfiniteScrollLoaderProps {
   hasMore: boolean
@@ -39,7 +38,7 @@ const InfiniteScrollLoader: React.FC<InfiniteScrollLoaderProps> = ({
       {children}
       <div
         ref={loadMoreRef}
-        style={{ height: '20px', background: 'transparent' }}
+        style={{ height: "20px", background: "transparent" }}
       />
       {isLoading && <Loader />}
     </>

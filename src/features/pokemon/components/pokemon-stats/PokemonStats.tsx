@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Tabs from '@/components/tabs'
+import React, { useState } from "react"
+import Tabs from "@/components/tabs"
 import {
   BarContainer,
   BarFill,
@@ -8,7 +8,7 @@ import {
   StatValue,
   StatsContainer,
   Title,
-} from './PokemonStats.styles'
+} from "./PokemonStats.styles"
 
 interface Stat {
   name: string
@@ -22,11 +22,11 @@ interface PokemonStatsProps {
 }
 
 const PokemonStats: React.FC<PokemonStatsProps> = ({ stats = [] }) => {
-  const [activeTab, setActiveTab] = useState<'base' | 'min-max'>('base')
+  const [activeTab, setActiveTab] = useState<"base" | "min-max">("base")
 
   const tabItems = [
-    { label: 'Base Stats', value: 'base' },
-    { label: 'Min-Max Stats', value: 'min-max' },
+    { label: "Base Stats", value: "base" },
+    { label: "Min-Max Stats", value: "min-max" },
   ]
 
   return (
@@ -34,10 +34,10 @@ const PokemonStats: React.FC<PokemonStatsProps> = ({ stats = [] }) => {
       <Title>Pokémon Stats</Title>
       <Tabs
         activeTab={activeTab}
-        onTabClick={(key: string) => setActiveTab(key as 'base' | 'min-max')}
+        onTabClick={(key: string) => setActiveTab(key as "base" | "min-max")}
         tabs={tabItems}
       />
-      {activeTab === 'base'
+      {activeTab === "base"
         ? stats.map((stat, index) => (
             <StatRow key={index}>
               <StatLabel>{stat.name}</StatLabel>

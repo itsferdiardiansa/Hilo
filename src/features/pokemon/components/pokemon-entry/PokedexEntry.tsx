@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 import {
   FaMapMarkerAlt,
   FaWeightHanging,
   FaRulerVertical,
   FaStar,
-} from 'react-icons/fa'
+} from "react-icons/fa"
 import {
   EntryContainer,
   Title,
@@ -13,7 +13,7 @@ import {
   IconContainer,
   InfoRow,
   SubTitle,
-} from './PokemonEntry.styles'
+} from "./PokemonEntry.styles"
 
 type Entry = {
   description: string
@@ -55,8 +55,8 @@ const PokedexEntry = ({ entry }: PokedexEntryProps) => {
           <IconContainer>
             <FaStar />
           </IconContainer>
-          <SubTitle>Shiny:</SubTitle>{' '}
-          {entry.shiny ? 'Available' : 'Not Available'}
+          <SubTitle>Shiny:</SubTitle>{" "}
+          {entry.shiny ? "Available" : "Not Available"}
         </InfoRow>
       </EntryContent>
     </EntryContainer>

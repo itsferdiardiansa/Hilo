@@ -1,11 +1,10 @@
-// src/features/pokemon/components/SearchForm.tsx
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect } from "react"
 import {
   SearchFormContainer,
   SearchFormWrapper,
   SearchTitle,
-} from './SearchForm.styles'
-import { Select, Input, Button } from '@/components/ui/form'
+} from "./SearchForm.styles"
+import { Select, Input, Button } from "@/components/ui/form"
 
 interface SelectType {
   id: number
@@ -23,20 +22,20 @@ const SearchForm: React.FC<SearchFormProps> = ({
 }) => {
   const [selectedPokemonType, setSelectedPokemonType] =
     useState<SelectType | null>(null)
-  const [pokemonName, setPokemonName] = useState<string>('')
+  const [pokemonName, setPokemonName] = useState<string>("")
 
   const pokemonTypes: SelectType[] = useMemo(
     () => [
-      { id: 1, name: 'fire' },
-      { id: 2, name: 'water' },
-      { id: 3, name: 'grass' },
-      { id: 4, name: 'electric' },
+      { id: 1, name: "fire" },
+      { id: 2, name: "water" },
+      { id: 3, name: "grass" },
+      { id: 4, name: "electric" },
     ],
     [],
   )
 
   useEffect(() => {
-    setPokemonName(initialFilters.name || '')
+    setPokemonName(initialFilters.name || "")
 
     if (initialFilters.type) {
       const matchedType = pokemonTypes.find(

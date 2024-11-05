@@ -1,4 +1,4 @@
-import { FaEgg, FaClock } from 'react-icons/fa'
+import { FaEgg, FaClock } from "react-icons/fa"
 import {
   EggGroupContainer,
   Title,
@@ -7,9 +7,9 @@ import {
   EggGroupItem,
   IconContainer,
   InfoRow,
-} from './EggGroup.styles'
+} from "./EggGroup.styles"
 
-const EggGroup = ({ eggGroups = [], hatchTime = 'N/A' }) => {
+const EggGroup = ({ eggGroups = [], hatchTime = "N/A" }) => {
   return (
     <EggGroupContainer>
       <Title>Egg Group & Breeding Info</Title>

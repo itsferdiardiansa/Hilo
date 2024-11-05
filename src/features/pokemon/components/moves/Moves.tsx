@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Tabs from '@/components/tabs'
-import { Card, MoveCell, MoveHeader, MoveRow, MoveTable } from './Moves.styles'
+import React, { useState } from "react"
+import Tabs from "@/components/tabs"
+import { Card, MoveCell, MoveHeader, MoveRow, MoveTable } from "./Moves.styles"
 
 interface Move {
   level: string
@@ -18,17 +18,17 @@ interface MovesProps {
 }
 
 const Moves: React.FC<MovesProps> = ({ moves }) => {
-  const [activeTab, setActiveTab] = useState('all')
+  const [activeTab, setActiveTab] = useState("all")
 
   const tabs = [
-    { label: 'All', value: 'all' },
-    { label: 'Physical', value: 'physical' },
-    { label: 'Special', value: 'special' },
-    { label: 'Status', value: 'status' },
+    { label: "All", value: "all" },
+    { label: "Physical", value: "physical" },
+    { label: "Special", value: "special" },
+    { label: "Status", value: "status" },
   ]
 
   const filteredMoves =
-    activeTab === 'all'
+    activeTab === "all"
       ? moves
       : moves.filter((move) => move.damage_class === activeTab)
 
@@ -52,8 +52,8 @@ const Moves: React.FC<MovesProps> = ({ moves }) => {
             <MoveCell>{move.name}</MoveCell>
             <MoveCell>{move.type}</MoveCell>
             <MoveCell>{move.icon}</MoveCell>
-            <MoveCell>{move.power || '-'}</MoveCell>
-            <MoveCell>{move.accuracy || '-'}</MoveCell>
+            <MoveCell>{move.power || "-"}</MoveCell>
+            <MoveCell>{move.accuracy || "-"}</MoveCell>
             <MoveCell>{move.pp}</MoveCell>
           </MoveRow>
         ))}

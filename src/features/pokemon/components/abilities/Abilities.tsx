@@ -1,4 +1,4 @@
-import { FaBolt, FaEyeSlash } from 'react-icons/fa'
+import { FaBolt, FaEyeSlash } from "react-icons/fa"
 import {
   AbilitiesContainer,
   AbilityDescription,
@@ -9,7 +9,7 @@ import {
   IconContainer,
   AbilityName,
   HiddenAbilityBadge,
-} from './Abilities.styles'
+} from "./Abilities.styles"
 
 type Ability = {
   name: string

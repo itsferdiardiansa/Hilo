@@ -1,1 +1,1 @@
-export { default } from './PokemonTypes'
+export { default } from "./PokemonTypes"

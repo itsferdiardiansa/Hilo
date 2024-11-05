@@ -1,1 +1,1 @@
-export { default } from './PokemonNotFound'
+export { default } from "./PokemonNotFound"

@@ -1,5 +1,4 @@
-// src/components/Loader.tsx
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from "styled-components"
 
 const bounce = keyframes`
   0%, 80%, 100% {

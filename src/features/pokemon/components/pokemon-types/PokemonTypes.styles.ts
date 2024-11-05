@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const TypesContainer = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ export const TypeHeader = styled.div`
 `
 
 export const Badge = styled.div<{ color?: string }>`
-  background-color: ${({ color }) => color || '#444'};
+  background-color: ${({ color }) => color || "#444"};
   color: #fff;
   font-size: 12px;
   padding: 6px 10px;

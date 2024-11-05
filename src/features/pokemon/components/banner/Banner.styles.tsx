@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const BannerContainer = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const BannerContainer = styled.div`
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -50%;
@@ -83,7 +83,7 @@ export const TypeBadge = styled.span<{ color: string }>`
   border-radius: 16px;
   font-size: 12px;
   color: #ffffff;
-  background-color: ${(props) => props.color || '#666'};
+  background-color: ${(props) => props.color || "#666"};
 
   @media (max-width: 480px) {
     font-size: 10px;

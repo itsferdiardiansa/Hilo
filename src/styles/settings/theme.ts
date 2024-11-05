@@ -1,15 +1,15 @@
-import { breakpoints } from './breakpoints'
+import { breakpoints } from "./breakpoints"
 
 export const theme = {
   colors: {
-    primary: '#333333',
-    secondary: '#ffffff',
-    accent: '#7289da',
-    background: '#f5f5f5',
-    foreground: '#171717',
+    primary: "#333333",
+    secondary: "#ffffff",
+    accent: "#7289da",
+    background: "#f5f5f5",
+    foreground: "#171717",
   },
   fonts: {
-    primary: 'Poppins, sans-serif',
+    primary: "Poppins, sans-serif",
   },
   breakpoints,
 }

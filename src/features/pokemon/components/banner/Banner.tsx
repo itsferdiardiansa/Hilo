@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import React from 'react'
+import React from "react"
 import {
   FaWeight,
   FaVenusMars,
@@ -10,7 +10,7 @@ import {
   FaMapMarkerAlt,
   FaLeaf,
   FaSkullCrossbones,
-} from 'react-icons/fa'
+} from "react-icons/fa"
 import {
   BannerContainer,
   InfoContainer,
@@ -24,7 +24,7 @@ import {
   PokemonImage,
   ExtraDetails,
   ExtraDetailItem,
-} from './Banner.styles'
+} from "./Banner.styles"
 
 const Banner = () => {
   return (
@@ -33,11 +33,11 @@ const Banner = () => {
         <Name>Bulbasaur</Name>
         <TypeContainer>
           <TypeBadge color="#78C850">
-            <FaLeaf style={{ fontSize: '14px' }} />
+            <FaLeaf style={{ fontSize: "14px" }} />
             Grass
           </TypeBadge>
           <TypeBadge color="#A040A0">
-            <FaSkullCrossbones style={{ fontSize: '14px' }} />
+            <FaSkullCrossbones style={{ fontSize: "14px" }} />
             Poison
           </TypeBadge>
         </TypeContainer>
@@ -79,9 +79,9 @@ const Banner = () => {
           <ExtraDetailItem>
             <FaStar
               style={{
-                fontSize: '14px',
-                color: '#FFD700',
-                marginBottom: '4px',
+                fontSize: "14px",
+                color: "#FFD700",
+                marginBottom: "4px",
               }}
             />
             <span>64 XP</span>
@@ -89,9 +89,9 @@ const Banner = () => {
           <ExtraDetailItem>
             <FaMapMarkerAlt
               style={{
-                fontSize: '14px',
-                color: '#FFA07A',
-                marginBottom: '4px',
+                fontSize: "14px",
+                color: "#FFA07A",
+                marginBottom: "4px",
               }}
             />
             <span>Forest</span>

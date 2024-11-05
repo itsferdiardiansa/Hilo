@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
+import { useState, useEffect } from "react"
+import { useRouter } from "next/router"
+import Link from "next/link"
 
-import { Pokemon } from '@/features/pokemon/api/pokemonApi'
-import { usePokemonList } from '@/features/pokemon/hooks/usePokemonList'
+import type { Pokemon } from "@/features/pokemon/api/pokemonApi"
+import { usePokemonList } from "@/features/pokemon/hooks/usePokemonList"
 
-import InfiniteScrollLoader from '@/components/infinity-scroll'
-import SearchForm from '@/features/pokemon/components/search-form'
-import PokemonCard from '@/features/pokemon/components/pokemon-card'
-import NotFound from '@/features/pokemon/components/pokemon-not-found'
-import { CenteredContainer } from '@/features/pokemon/components/pokemon-not-found/PokemonNotFound.styles'
+import InfiniteScrollLoader from "@/components/infinity-scroll"
+import SearchForm from "@/features/pokemon/components/search-form"
+import PokemonCard from "@/features/pokemon/components/pokemon-card"
+import NotFound from "@/features/pokemon/components/pokemon-not-found"
+import { CenteredContainer } from "@/features/pokemon/components/pokemon-not-found/PokemonNotFound.styles"
 
-import { StyledPokemonList } from './PokemonList.styles'
-import Loader from '@/components/infinity-scroll/Loader'
+import { StyledPokemonList } from "./PokemonList.styles"
+import Loader from "@/components/infinity-scroll/Loader"
 
 const PokemonList = () => {
   const router = useRouter()
@@ -35,7 +35,7 @@ const PokemonList = () => {
 
     router.push(
       {
-        pathname: '/',
+        pathname: "/",
         query: {
           ...(newFilters.name ? { name: newFilters.name } : {}),
           ...(newFilters.type ? { type: newFilters.type } : {}),
@@ -49,6 +49,7 @@ const PokemonList = () => {
   useEffect(() => {
     if (JSON.stringify(filters) === JSON.stringify(initialFilters)) return
     setFilters(initialFilters)
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, [router.query, initialFilters])
 
   return (
@@ -59,32 +60,28 @@ const PokemonList = () => {
         <CenteredContainer>
           <Loader />
         </CenteredContainer>
+      ) : data?.pages?.[0]?.data?.length === 0 ? (
+        <NotFound />
       ) : (
-        <>
-          {data?.pages?.[0]?.data?.length === 0 ? (
-            <NotFound />
-          ) : (
-            <InfiniteScrollLoader
-              hasMore={!!hasNextPage}
-              isLoading={isFetchingNextPage}
-              loadMore={fetchNextPage}
-            >
-              <StyledPokemonList>
-                {data?.pages.map((page) =>
-                  page.data.map((pokemon: Pokemon, index: number) => (
-                    <Link
-                      key={`${pokemon.id}-${index}`}
-                      href={`/@${pokemon.name}`}
-                      passHref
-                    >
-                      <PokemonCard {...pokemon} />
-                    </Link>
-                  )),
-                )}
-              </StyledPokemonList>
-            </InfiniteScrollLoader>
-          )}
-        </>
+        <InfiniteScrollLoader
+          hasMore={!!hasNextPage}
+          isLoading={isFetchingNextPage}
+          loadMore={fetchNextPage}
+        >
+          <StyledPokemonList>
+            {data?.pages.map((page) =>
+              page.data.map((pokemon: Pokemon, index: number) => (
+                <Link
+                  key={`${pokemon.id}-${index}`}
+                  href={`/@${pokemon.name}`}
+                  passHref
+                >
+                  <PokemonCard {...pokemon} />
+                </Link>
+              )),
+            )}
+          </StyledPokemonList>
+        </InfiniteScrollLoader>
       )}
     </>
   )

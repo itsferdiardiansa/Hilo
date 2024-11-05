@@ -1,5 +1,5 @@
-import React from 'react'
-import { FaMars, FaVenus } from 'react-icons/fa'
+import React from "react"
+import { FaMars, FaVenus } from "react-icons/fa"
 import {
   CardContainer,
   Title,
@@ -15,7 +15,7 @@ import {
   ArrowContainer,
   ArrowIconDown,
   ArrowIconRight,
-} from './EvolutionCard.styles'
+} from "./EvolutionCard.styles"
 
 const genderIcons = {
   male: <FaMars />,
@@ -28,7 +28,7 @@ interface Pokemon {
   evolutionLevel: string
   type: string
   typeColor: string
-  gender?: 'male' | 'female'
+  gender?: "male" | "female"
 }
 
 interface EvolutionCardProps {
