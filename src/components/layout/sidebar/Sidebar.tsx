@@ -1,6 +1,5 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import React, { useEffect, useState } from "react"
 import { Drawer } from "antd"
 import {
   SidebarContainer,
@@ -11,7 +10,7 @@ import {
   SidebarFooter,
   DisabledLink,
 } from "./Sidebar.styles"
-import { useMediaQuery } from "react-responsive"
+import { useMedia } from "use-media"
 import { useRouter } from "next/router"
 import { FiX } from "react-icons/fi"
 
@@ -31,16 +30,7 @@ type SidebarProps = {
 }
 
 const InnerNavMenu = ({ items }: Omit<SidebarProps, "isOpen" | "onClose">) => {
-  const [currentPath, setCurrentPath] = useState<string | null>(null)
   const router = useRouter()
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentPath(router.pathname)
-    }
-  }, [router.pathname])
-
-  if (!currentPath) return null
 
   return (
     <>
@@ -51,7 +41,7 @@ const InnerNavMenu = ({ items }: Omit<SidebarProps, "isOpen" | "onClose">) => {
               {item.icon} {item.title}
             </NavTitle>
             {item.links.map((link, linkIdx) => (
-              <Subtitle key={linkIdx} $isActive={currentPath === link.href}>
+              <Subtitle key={linkIdx} $isActive={router.pathname === link.href}>
                 {!link.disabled ? (
                   <Link href={link.href} passHref>
                     {link.icon}
@@ -75,23 +65,28 @@ const InnerNavMenu = ({ items }: Omit<SidebarProps, "isOpen" | "onClose">) => {
 }
 
 const Sidebar = ({ items, isOpen, onClose }: SidebarProps) => {
-  const isMobileOrTablet = useMediaQuery({ maxWidth: 1024 })
+  const isMobileOrTablet = useMedia({ maxWidth: 1024 })
 
-  return isMobileOrTablet ? (
-    <Drawer
-      placement="bottom"
-      onClose={onClose}
-      title="Main Menu"
-      open={isOpen}
-      height="100vh"
-      bodyStyle={{ padding: 10 }}
-      headerStyle={{ padding: 16, borderBottom: "1px solid #333333" }}
-      drawerStyle={{ backgroundColor: "#1e1e1e", color: "#ffffff" }}
-      closeIcon={<FiX style={{ color: "#ffffff", fontSize: "16px" }} />}
-    >
-      <InnerNavMenu items={items} />
-    </Drawer>
-  ) : (
+  if (isMobileOrTablet)
+    return (
+      <Drawer
+        placement="bottom"
+        onClose={onClose}
+        title="Main Menu"
+        open={isOpen}
+        height="100vh"
+        styles={{
+          header: { padding: 16, borderBottom: "1px solid #333333" },
+          body: { padding: 10 },
+          content: { backgroundColor: "#1e1e1e", color: "#ffffff" },
+        }}
+        closeIcon={<FiX style={{ color: "#ffffff", fontSize: "16px" }} />}
+      >
+        <InnerNavMenu items={items} />
+      </Drawer>
+    )
+
+  return (
     <SidebarContainer>
       <InnerNavMenu items={items} />
     </SidebarContainer>
