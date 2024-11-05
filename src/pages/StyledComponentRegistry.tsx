@@ -6,7 +6,7 @@ type StyledComponentsRegistryProps = {
   children: React.ReactNode
 }
 
-export const StyledComponentsRegistry = ({
+const StyledComponentsRegistry = ({
   children,
 }: StyledComponentsRegistryProps) => {
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet())
@@ -14,10 +14,10 @@ export const StyledComponentsRegistry = ({
   useServerInsertedHTML(() => {
     const styles = styledComponentsStyleSheet.getStyleElement()
     styledComponentsStyleSheet.instance.clearTag()
-    return <>{styles}</>
+    return styles
   })
 
-  if (typeof window !== "undefined") return <>{children}</>
+  if (typeof window !== "undefined") return children
 
   return (
     <StyleSheetManager sheet={styledComponentsStyleSheet.instance}>
@@ -25,3 +25,5 @@ export const StyledComponentsRegistry = ({
     </StyleSheetManager>
   )
 }
+
+export default StyledComponentsRegistry
